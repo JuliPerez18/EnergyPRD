@@ -340,7 +340,7 @@ def _gr4j(prec, pet, x1, x2, x3, x4, ps0, rs0):
         evap, res_prod, rout_pat = res
 
         psto = psto - evap + res_prod
-        perc = psto / (1. + (psto / 2.25 / x1) ** 4.) ** 0.25
+        perc = psto / (1. + (psto / 2.25 / x1) ** 4.+1) ** 0.25
         rout_pat = rout_pat + (psto - perc)
         psto = perc
 
